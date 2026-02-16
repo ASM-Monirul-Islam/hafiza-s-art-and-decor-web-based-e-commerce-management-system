@@ -30,16 +30,16 @@ document.addEventListener("click", (e)=>{
 
 // hero image
 
-// const images = [
-//     "../assets/hero1.png",
-//     "../assets/hero2.png"
-// ];
+const images = [
+    "../assets/hero1.png",
+    "../assets/hero2.png"
+];
 
-// const hero = document.getElementById("hero_img");
+const hero = document.getElementById("hero_img");
 
-// let index = 0;
+let index = 0;
 
-// setInterval(() => {
-//     index = (index + 1) % images.length;
-//     hero.style.backgroundImage = `url(${images[index]})`;
-// }, 2000);
+setInterval(() => {
+    index = (index + 1) % images.length;
+    hero.style.backgroundImage = `url(${images[index]})`;
+}, 3000);
