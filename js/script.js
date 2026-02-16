@@ -28,18 +28,18 @@ document.addEventListener("click", (e)=>{
 });
 
 
-// hero image
+// hero image switching
 
-const images = [
-    "../assets/hero1.png",
-    "../assets/hero2.png"
-];
+document.addEventListener("DOMContentLoaded", () => {
+    const hero = document.querySelector("#hero_img");
+    const images = [
+		"../assets/hero1.png",
+		"../assets/hero2.png"
+	];
+    let index = 0;
 
-const hero = document.getElementById("hero_img");
-
-let index = 0;
-
-setInterval(() => {
-    index = (index + 1) % images.length;
-    hero.style.backgroundImage = `url(${images[index]})`;
-}, 3000);
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        hero.style.backgroundImage = `url(${images[index]})`;
+    }, 3000);
+});
