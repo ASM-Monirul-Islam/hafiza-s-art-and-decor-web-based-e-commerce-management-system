@@ -43,3 +43,5 @@ document.addEventListener("click", (e)=>{
 //         hero.style.backgroundImage = `url(${images[index]})`;
 //     }, 3000);
 // });
+
+
