@@ -160,13 +160,12 @@ a {
 }
 
 #hero a {
-  background-color: transparent;
-  background-image: url("../assets/button.png");
+  background-color: rgba(255, 69, 0, 0.5);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 10px 25px;
-  gap: 10px;
+  padding: 6px 25px;
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -262,6 +261,26 @@ a {
   background-color: #cff0d5;
   transition: 0.3s ease-in-out;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -557,8 +576,8 @@ a {
   #hero a {
     font-size: 8px;
     height: 20px;
-    width: 140px;
   }
+  
   .product {
     min-width: 150px;
     padding: 5px;
