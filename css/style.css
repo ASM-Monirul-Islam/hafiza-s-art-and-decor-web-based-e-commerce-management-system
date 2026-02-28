@@ -160,7 +160,7 @@ a {
 }
 
 #hero a {
-  background-color: rgba(255, 69, 0, 0.5);
+  background-color: rgba(255, 165, 0, 0.35);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -261,6 +261,60 @@ a {
   background-color: #cff0d5;
   transition: 0.3s ease-in-out;
 }
+
+/* footer section */
+
+.footer_column * {
+  color: white;
+}
+
+#footer {
+  background-color: #222;
+  display: flex;
+  justify-content: space-between  ;
+  align-items: flex-start;
+  position: relative;
+}
+
+#footer .footer_column img {
+  height: 100px;
+  width: 100px;
+}
+
+.footer_column h4 {
+  margin-bottom: 20px;
+}
+
+.footer_social_link .footer_social_media_icon{
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer_social_link .footer_social_media_icon a i{
+  font-size: 25px;
+}
+
+.up_arrow{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #e3e6f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.arrow {
+  color: black;
+}
+
+
 
 
 
@@ -439,6 +493,19 @@ a {
   }
   #hero a {
     font-weight: 700;
+    background-color: rgba(255, 69, 0, 0.5);
+  }
+  #footer {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer_column{
+    width: 43%;
+  }
+  .footer_social_link .footer_social_media_icon {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 
@@ -538,7 +605,32 @@ a {
   #hero_texts {
     max-height: 350px;
   }
-  
+}
+
+/* 550px */
+
+@media (max-width: 550px) {
+  #footer {
+    gap: 40px;
+  }
+  .footer_column{
+    width: 90%;
+  }
+  .footer_social_link .footer_social_media_icon {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .footer_column {
+    text-align: center;
+  }
+  .footer_column p {
+    text-align: start;
+  }
+  .footer_social_link .footer_social_media_icon {
+    justify-content: center;
+    gap: 20px;
+  }
 }
 
 /* 480 px */
@@ -577,7 +669,7 @@ a {
     font-size: 8px;
     height: 20px;
   }
-  
+
   .product {
     min-width: 150px;
     padding: 5px;
