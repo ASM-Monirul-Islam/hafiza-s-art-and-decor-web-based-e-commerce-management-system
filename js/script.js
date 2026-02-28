@@ -4,44 +4,43 @@ const bar = document.querySelector("#bar");
 const navbar = document.querySelector("#navbar");
 const close = document.querySelector("#close");
 
-
-if(bar) {
-	bar.addEventListener("click", ()=>{
-		navbar.classList.add("active");
-	})
+if (bar) {
+  bar.addEventListener("click", () => {
+    navbar.classList.add("active");
+  });
 }
 
-if(close) {
-	close.addEventListener("click", ()=>{
-		navbar.classList.remove("active");
-	});
+if (close) {
+  close.addEventListener("click", () => {
+    navbar.classList.remove("active");
+  });
 }
 
-document.addEventListener("click", (e)=>{
-	if(
-		navbar.classList.contains("active") &&
-		!bar.contains(e.target) &&
-		!close.contains(e.target)
-	) {
-		navbar.classList.remove("active");
-	}
+document.addEventListener("click", (e) => {
+  if (
+    navbar.classList.contains("active") &&
+    !bar.contains(e.target) &&
+    !close.contains(e.target)
+  ) {
+    navbar.classList.remove("active");
+  }
 });
 
+// Shop section
 
-// hero image switching
+function filterProduct() {
+  const ctg = document.querySelector("#shop_category").value;
+  const product = document.querySelectorAll(".product");
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const hero = document.querySelector("#hero_img");
-//     const images = [
-// 		"../assets/hero1.png",
-// 		"../assets/hero2.png"
-// 	];
-//     let index = 0;
-
-//     setInterval(() => {
-//         index = (index + 1) % images.length;
-//         hero.style.backgroundImage = `url(${images[index]})`;
-//     }, 3000);
-// });
-
-
+  product.forEach((prod) => {
+    if (ctg == "all") {
+      prod.style.display = "block";
+    } else {
+      if (ctg == prod.dataset.category) {
+        prod.style.display = "block";
+      } else {
+        prod.style.display = "none";
+      }
+    }
+  });
+}

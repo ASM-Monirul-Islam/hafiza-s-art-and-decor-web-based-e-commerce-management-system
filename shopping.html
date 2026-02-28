@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .product {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+      }
+      select {
+        padding: 8px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Shop</h2>
+
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="all">All Categories</option>
+      <option value="gypsum">Gypsum</option>
+      <option value="candle">Candle</option>
+      <option value="bangles">Bangles</option>
+    </select>
+
+    <hr />
+
+    <div class="product" data-category="gypsum">Gypsum Wall Panel</div>
+    <div class="product" data-category="candle">Scented Candle</div>
+    <div class="product" data-category="bangles">Gold Bangles</div>
+    <div class="product" data-category="candle">Decorative Candle</div>
+    <div class="product" data-category="gypsum">Gypsum Board</div>
+    <script>
+      function filterProducts() {
+        let selectedCategory = document.getElementById("categoryFilter").value;
+        let products = document.querySelectorAll(".product");
+
+        products.forEach((product) => {
+          if (selectedCategory === "all") {
+            product.style.display = "block";
+          } else {
+            if (product.dataset.category === selectedCategory) {
+              product.style.display = "block";
+            } else {
+              product.style.display = "none";
+            }
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -19,8 +19,8 @@
     <section id="header">
       <a href="#"><img src="assets/logo_header.png" id="logo" /></a>
       <ul id="navbar">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="shop.html">Shop</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li>
@@ -38,97 +38,92 @@
       </div>
     </section>
 
-    <!-- hero -->
-
-    <section id="hero">
-      <div id="hero_texts">
-        <h4>Handmade with love</h4>
-        <h3>Styled with soul</h3>
-        <h1>Hafiza's Art & Decor</h1>
-        <p>Turning Simple Spaces Into Beautiful Stories.</p>
-        <a href="#">Shop now</a>
-      </div>
-      <div id="hero_img"></div>
-    </section>
-
-    <section id="featured_products" class="section-p1 section-m1">
-      <h2>Featured Products</h2>
-      <p>Find the products below</p>
+    <section id="shop_products" class="section-p1">
+      <h2>Our Products</h2>
+      <div class="category_section">
+		<p>Find the products below</p>
+		<select name="shop_category" id="shop_category" onchange="filterProduct()">
+			<option value="all">All Products</option>
+			<option value="gypsum">Gypsum</option>
+			<option value="candle">Candle</option>
+			<option value="bangles">Bangles</option>
+		</select>
+	  </div>
       <div class="product_container">
-        <div class="product">
+        <div class="product" data-category="gypsum">
           <img
             onclick="window.location.href = '#'"
             src="assets/fe-prod-02.jpg"
           />
           <div class="product_description">
             <span class="product_category">Gypsum</span>
-            <h5 class="product_name">name</h5>
+            <h5 class="product_name">gypsum</h5>
             <h4 class="product_price">BDT 150</h4>
           </div>
           <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
         </div>
-        <div class="product">
-          <img src="assets/fe-prod-02.jpg" />
-          <div class="product_description">
-            <span class="product_category">candle</span>
-            <h5 class="product_name">Flower Candle inside a Juwellery Box</h5>
-            <h4 class="product_price">BDT 150</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
-        </div>
-        <div class="product">
+        <div class="product" data-category="gypsum">
           <img src="assets/fe-prod-02.jpg" />
           <div class="product_description">
             <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
+            <h5 class="product_name">gypsum</h5>
             <h4 class="product_price">BDT 150</h4>
           </div>
           <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
         </div>
-        <div class="product">
+        <div class="product" data-category="candle">
+          <img src="assets/fe-prod-02.jpg" />
+          <div class="product_description">
+            <span class="product_category">Candle</span>
+            <h5 class="product_name">candle</h5>
+            <h4 class="product_price">BDT 150</h4>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
+        </div>
+        <div class="product" data-category="bangles">
+          <img src="assets/fe-prod-02.jpg" />
+          <div class="product_description">
+            <span class="product_category">Bangles</span>
+            <h5 class="product_name">bangles</h5>
+            <h4 class="product_price">BDT 150</h4>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
+        </div>
+        <div class="product" data-category="gypsum">
           <img src="assets/fe-prod-02.jpg" />
           <div class="product_description">
             <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
+            <h5 class="product_name">gypsum</h5>
             <h4 class="product_price">BDT 150</h4>
           </div>
           <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
         </div>
-        <div class="product">
+        <div class="product" data-category="candle">
           <img src="assets/fe-prod-02.jpg" />
           <div class="product_description">
-            <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
+            <span class="product_category">Candle</span>
+            <h5 class="product_name">candle</h5>
             <h4 class="product_price">BDT 150</h4>
           </div>
           <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
         </div>
-        <div class="product">
+        <div class="product" data-category="bangles">
           <img src="assets/fe-prod-02.jpg" />
           <div class="product_description">
-            <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
+            <span class="product_category">Bangles</span>
+            <h5 class="product_name">bangles</h5>
             <h4 class="product_price">BDT 150</h4>
           </div>
           <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
         </div>
-        <div class="product">
-          <img src="assets/fe-prod-02.jpg" />
-          <div class="product_description">
-            <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
-            <h4 class="product_price">BDT 150</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
-        </div>
-        <div class="product">
+        <div class="product" data-category="gypsum">
           <img
             onclick="window.location.href = '#'"
             src="assets/fe-prod-02.jpg"
           />
           <div class="product_description">
             <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
+            <h5 class="product_name">gypsum</h5>
             <h4 class="product_price">BDT 150</h4>
           </div>
           <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
