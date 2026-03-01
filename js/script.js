@@ -29,18 +29,18 @@ document.addEventListener("click", (e) => {
 // Shop section
 
 function filterProduct() {
-  const ctg = document.querySelector("#shop_category").value;
-  const product = document.querySelectorAll(".product");
+	const product_category = document.querySelector("#category").value;
+	const products = document.querySelectorAll(".product");
 
-  product.forEach((prod) => {
-    if (ctg == "all") {
-      prod.style.display = "block";
-    } else {
-      if (ctg == prod.dataset.category) {
-        prod.style.display = "block";
-      } else {
-        prod.style.display = "none";
-      }
-    }
-  });
+	products.forEach(product => {
+		if(product_category=="all") {
+			product.style.display = "block";
+		}else {
+			if(product.dataset.category==product_category) {
+				product.style.display = "block";
+			}else {
+				product.style.display="none";
+			}
+		}
+	})
 }

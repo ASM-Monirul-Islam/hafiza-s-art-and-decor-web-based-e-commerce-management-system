@@ -20,20 +20,13 @@
       <a href="#"><img src="assets/logo_header.png" id="logo" /></a>
       <ul id="navbar">
         <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li>
-          <a id="inside_cart" href="cart.html"
-            ><i class="fa-solid fa-cart-arrow-down"></i
-          ></a>
-        </li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">MyOrder</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" id="login_btn">Login</a></li>
         <i id="close" class="fa-solid fa-xmark"></i>
       </ul>
       <div id="mobile">
-        <a style="list-style: none; color: #222" href="cart.html"
-          ><i class="fa-solid fa-cart-arrow-down"></i
-        ></a>
         <i id="bar" class="fa-solid fa-bars"></i>
       </div>
     </section>
@@ -46,92 +39,141 @@
         <h3>Styled with soul</h3>
         <h1>Hafiza's Art & Decor</h1>
         <p>Turning Simple Spaces Into Beautiful Stories.</p>
-        <a href="#">Shop now</a>
       </div>
       <div id="hero_img"></div>
     </section>
 
     <section id="featured_products" class="section-p1 section-m1">
-      <h2>Featured Products</h2>
-      <p>Find the products below</p>
+      <h2>Our Products</h2>
+      <div class="category_section">
+        <p>Browse Products by Category</p>
+        <select name="category" id="category" onchange="filterProduct()">
+          <option value="all">All Products</option>
+          <option value="gypsum">Gypsum</option>
+          <option value="candle">Candle</option>
+          <option value="bangles">Bangles</option>
+        </select>
+      </div>
       <div class="product_container">
-        <div class="product">
+
+        <!-- prod 1 -->
+
+        <div class="product" data-category="gypsum">
           <img
             onclick="window.location.href = '#'"
             src="assets/fe-prod-02.jpg"
           />
           <div class="product_description">
             <span class="product_category">Gypsum</span>
-            <h5 class="product_name">name</h5>
+            <h5 class="product_name">Gypsum</h5>
             <h4 class="product_price">BDT 150</h4>
           </div>
-          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
+          <a href="#" class="view_product">View Product</a>
         </div>
-        <div class="product">
-          <img src="assets/fe-prod-02.jpg" />
-          <div class="product_description">
-            <span class="product_category">candle</span>
-            <h5 class="product_name">Flower Candle inside a Juwellery Box</h5>
-            <h4 class="product_price">BDT 150</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
-        </div>
-        <div class="product">
-          <img src="assets/fe-prod-02.jpg" />
-          <div class="product_description">
-            <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
-            <h4 class="product_price">BDT 150</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
-        </div>
-        <div class="product">
-          <img src="assets/fe-prod-02.jpg" />
-          <div class="product_description">
-            <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
-            <h4 class="product_price">BDT 150</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
-        </div>
-        <div class="product">
-          <img src="assets/fe-prod-02.jpg" />
-          <div class="product_description">
-            <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
-            <h4 class="product_price">BDT 150</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
-        </div>
-        <div class="product">
-          <img src="assets/fe-prod-02.jpg" />
-          <div class="product_description">
-            <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
-            <h4 class="product_price">BDT 150</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
-        </div>
-        <div class="product">
-          <img src="assets/fe-prod-02.jpg" />
-          <div class="product_description">
-            <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
-            <h4 class="product_price">BDT 150</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
-        </div>
-        <div class="product">
+
+        <!-- prod 2 -->
+
+        <div class="product" data-category="gypsum">
           <img
             onclick="window.location.href = '#'"
             src="assets/fe-prod-02.jpg"
           />
           <div class="product_description">
             <span class="product_category">Gypsum</span>
-            <h5 class="product_name">Pumpkin</h5>
+            <h5 class="product_name">Gypsum</h5>
             <h4 class="product_price">BDT 150</h4>
           </div>
-          <a href="#"><i class="fa-solid fa-cart-plus product_cart"></i></a>
+          <a href="#" class="view_product">View Product</a>
+        </div>
+
+        <!-- prod 3 -->
+
+        <div class="product" data-category="candle">
+          <img
+            onclick="window.location.href = '#'"
+            src="assets/fe-prod-02.jpg"
+          />
+          <div class="product_description">
+            <span class="product_category">Candle</span>
+            <h5 class="product_name">Candle</h5>
+            <h4 class="product_price">BDT 150</h4>
+          </div>
+          <a href="#" class="view_product">View Product</a>
+        </div>
+
+        <!-- prod 4 -->
+
+        <div class="product" data-category="candle">
+          <img
+            onclick="window.location.href = '#'"
+            src="assets/fe-prod-02.jpg"
+          />
+          <div class="product_description">
+            <span class="product_category">Candle</span>
+            <h5 class="product_name">Candle</h5>
+            <h4 class="product_price">BDT 150</h4>
+          </div>
+          <a href="#" class="view_product">View Product</a>
+        </div>
+
+        <!-- prod 5 -->
+
+        <div class="product" data-category="bangles">
+          <img
+            onclick="window.location.href = '#'"
+            src="assets/fe-prod-02.jpg"
+          />
+          <div class="product_description">
+            <span class="product_category">Bangles</span>
+            <h5 class="product_name">Bangles</h5>
+            <h4 class="product_price">BDT 150</h4>
+          </div>
+          <a href="#" class="view_product">View Product</a>
+        </div>
+
+        <!-- prod 6 -->
+
+        <div class="product" data-category="bangles">
+          <img
+            onclick="window.location.href = '#'"
+            src="assets/fe-prod-02.jpg"
+          />
+          <div class="product_description">
+            <span class="product_category">Bangles</span>
+            <h5 class="product_name">Bangles</h5>
+            <h4 class="product_price">BDT 150</h4>
+          </div>
+          <a href="#" class="view_product">View Product</a>
+        </div>
+
+        <!-- prod 7 -->
+
+        <div class="product" data-category="gypsum">
+          <img
+            onclick="window.location.href = '#'"
+            src="assets/fe-prod-02.jpg"
+          />
+          <div class="product_description">
+            <span class="product_category">Gypsum</span>
+            <h5 class="product_name">Gypsum</h5>
+            <h4 class="product_price">BDT 150</h4>
+          </div>
+          <a href="#" class="view_product">View Product</a>
+        </div>
+
+        <!-- prod 8 -->
+
+        <div class="product" data-category="gypsum">
+          <img
+            onclick="window.location.href = '#'"
+            src="assets/fe-prod-02.jpg"
+          />
+          <div class="product_description">
+            <span class="product_category">Gypsum</span>
+            <h5 class="product_name">Gypsum</h5>
+            <h4 class="product_price">BDT 150</h4>
+          </div>
+          <a href="#" class="view_product">View Product</a>
         </div>
       </div>
     </section>
